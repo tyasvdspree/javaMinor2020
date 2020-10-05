@@ -16,8 +16,9 @@ public class AccountService {
     private AccountHolderRepository repository;
     private BankAccountRepository bankAccountRepository;
 
-    public AccountService(AccountHolderRepository repository) {
+    public AccountService(AccountHolderRepository repository, BankAccountRepository bankAccountRepository) {
         this.repository = repository;
+        this.bankAccountRepository = bankAccountRepository;
     }
 
     public List<AccountHolder> getAccountHolders() {
