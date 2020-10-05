@@ -35,18 +35,21 @@ public class BankAccountController {
     }
 
     @PostMapping("")
+    @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public Long createAccount(@RequestBody BankAccount account){
         return service.createAccount(account);
     }
 
     @PutMapping("/{id}")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public void updateAccount(@PathVariable long id, @RequestBody BankAccount account){
         service.updateAccount(account);
     }
 
     @PutMapping("/{id}")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public void blockAccount(@PathVariable long id){
         BankAccount bankAccount = service.getBankAccount(id).orElseThrow(BankAccountNotFound::new);
@@ -54,6 +57,7 @@ public class BankAccountController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public void deleteBankAccount(@PathVariable Long id){
         BankAccount bankAccount = service.getBankAccount(id).orElseThrow(BankAccountNotFound::new);

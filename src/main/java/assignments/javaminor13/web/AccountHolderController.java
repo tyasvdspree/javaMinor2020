@@ -49,12 +49,14 @@ public class AccountHolderController {
     }
 
     @PutMapping("/{id}")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public void updateAccountHolder(@PathVariable long id, @RequestBody AccountHolder accountHolder){
         service.updateAccount(accountHolder);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public void deleteAccountHolder(@PathVariable long id){
         service.getAccountHolder(id).orElseThrow(AccountHolderNotFound::new);
