@@ -35,7 +35,12 @@ public class BankService {
     }
 
     public void updateAccount(BankAccount bankAccount){
+        repository.update(bankAccount);
+    }
 
+    public void blockAccount(BankAccount bankAccount){
+        bankAccount.blockAccount();
+        repository.update(bankAccount);
     }
 
     public void deleteAccount(BankAccount account){

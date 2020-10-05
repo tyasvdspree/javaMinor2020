@@ -1,4 +1,4 @@
-package assignments.javaminor13;
+package assignments.javaminor13.web;
 
 import assignments.javaminor13.exception.BankAccountNotFound;
 import assignments.javaminor13.models.BankAccount;
@@ -46,8 +46,16 @@ public class BankAccountController {
         service.updateAccount(account);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void blockAccount(@PathVariable long id){
+        BankAccount bankAccount = service.getBankAccount(id).orElseThrow(BankAccountNotFound::new);
+        service.blockAccount(bankAccount);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteBankAccount(@PathVariable Long id){
-        service.deleteAccount(id);
+        BankAccount bankAccount = service.getBankAccount(id).orElseThrow(BankAccountNotFound::new);
+        service.deleteAccount(bankAccount);
     }
 }

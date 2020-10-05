@@ -15,6 +15,7 @@ public class BankAccount{
     private Long saldo;
     @NotEmpty(message = "Must have at least one accountHolder")
     private ArrayList<AccountHolder> accountHolders;
+    private boolean isBlocked = false;
 
     public BankAccount(String IBAN, ArrayList<AccountHolder> accountHolders) {
         this.id = rdm.nextLong();
@@ -43,6 +44,14 @@ public class BankAccount{
 
     public ArrayList<AccountHolder> getAccountHolders() {
         return accountHolders;
+    }
+
+    public void blockAccount(){
+        this.isBlocked = true;
+    }
+
+    public boolean isBlocked() {
+        return isBlocked;
     }
 
     public boolean isEmpty(){

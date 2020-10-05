@@ -1,10 +1,8 @@
 package assignments.javaminor13.data;
 
 import assignments.javaminor13.models.BankAccount;
-import org.springframework.data.repository.Repository;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
