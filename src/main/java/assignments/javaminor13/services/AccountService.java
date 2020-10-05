@@ -36,7 +36,7 @@ public class AccountService {
     public List<BankAccount> getBankAccounts(long id) {
         List<BankAccount> bankAccounts = new ArrayList<>();
         bankAccountRepository.findAll().forEach(bankAccount -> {
-                if(bankAccount.getAccountHolders().contains(bankAccount)){
+                if(bankAccount.getAccountHolders().contains(repository.findOne(id))){
                     bankAccounts.add(bankAccount);
                 }});
         return bankAccounts;
