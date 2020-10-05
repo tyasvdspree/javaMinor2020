@@ -1,13 +1,13 @@
 package assignments.javaminor13.data;
 
 import assignments.javaminor13.models.AccountHolder;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-@Component
+@Repository
 public class AccountHolderRepository {
 
     public static final HashMap<Long, AccountHolder> accountHolders = new HashMap<>();
