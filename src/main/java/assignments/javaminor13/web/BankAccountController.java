@@ -54,6 +54,7 @@ public class BankAccountController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public void deleteBankAccount(@PathVariable Long id){
         BankAccount bankAccount = service.getBankAccount(id).orElseThrow(BankAccountNotFound::new);
         service.deleteAccount(bankAccount);

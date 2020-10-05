@@ -1,7 +1,6 @@
 package assignments.javaminor13.web;
 
 import assignments.javaminor13.exception.AccountHolderNotFound;
-import assignments.javaminor13.exception.BankAccountNotFound;
 import assignments.javaminor13.models.AccountHolder;
 import assignments.javaminor13.models.BankAccount;
 import assignments.javaminor13.services.AccountService;
@@ -38,7 +37,7 @@ public class AccountHolderController {
 
     @GetMapping("/{id}/accounts/")
     @ResponseBody
-    @ResponseStatus
+    @ResponseStatus(HttpStatus.OK)
     public List<BankAccount> getBankAccounts(@PathVariable long id) {
         return service.getBankAccounts(id);
     }
