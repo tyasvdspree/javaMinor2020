@@ -1,4 +1,4 @@
-package assignments.javaminor13.data;
+package assignments.javaminor14.data;
 
 import org.springframework.data.repository.Repository;
 

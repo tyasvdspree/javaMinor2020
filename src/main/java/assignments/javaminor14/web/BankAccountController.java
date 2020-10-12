@@ -1,8 +1,8 @@
-package assignments.javaminor13.web;
+package assignments.javaminor14.web;
 
-import assignments.javaminor13.exception.BankAccountNotFound;
-import assignments.javaminor13.models.BankAccount;
-import assignments.javaminor13.services.BankService;
+import assignments.javaminor14.exception.BankAccountNotFound;
+import assignments.javaminor14.models.BankAccount;
+import assignments.javaminor14.services.BankService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

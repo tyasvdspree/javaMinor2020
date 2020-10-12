@@ -1,4 +1,4 @@
-package assignments.javaminor13.exception;
+package assignments.javaminor14.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

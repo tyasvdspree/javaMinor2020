@@ -1,13 +1,13 @@
-package assignments.javaminor13;
+package assignments.javaminor14;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Javaminor13Application {
+public class Javaminor14Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Javaminor13Application.class, args);
+        SpringApplication.run(Javaminor14Application.class, args);
     }
 
 }

@@ -1,7 +1,7 @@
-package assignments.javaminor13.services;
+package assignments.javaminor14.services;
 
-import assignments.javaminor13.data.BankAccountRepository;
-import assignments.javaminor13.models.BankAccount;
+import assignments.javaminor14.data.BankAccountRepository;
+import assignments.javaminor14.models.BankAccount;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -35,19 +35,15 @@ public class BankService {
     }
 
     public void updateAccount(BankAccount bankAccount){
-        repository.update(bankAccount);
+        repository.save(bankAccount);
     }
 
     public void blockAccount(BankAccount bankAccount){
         bankAccount.blockAccount();
-        repository.update(bankAccount);
+        repository.save(bankAccount);
     }
 
     public void deleteAccount(BankAccount account){
         repository.delete(account);
-    }
-
-    public void deleteAccount(Long id){
-        repository.delete(id);
     }
 }
