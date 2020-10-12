@@ -17,7 +17,9 @@ public class AccountHolder extends BaseEntity{
     @Embedded
     private assignments.javaminor14.models.Address Address;
 
-    @ManyToMany(mappedBy = "bankaccount_holders")
+    @ManyToMany(
+            mappedBy = "accountHolders"
+    )
     private List<BankAccount> accounts = new ArrayList<>();
 
     public AccountHolder() {}
