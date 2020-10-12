@@ -15,7 +15,7 @@ public class AccountHolder extends BaseEntity{
     @Enumerated
     private Gender gender;
     @Embedded
-    private String adress;
+    private assignments.javaminor14.models.Address Address;
 
     @ManyToMany(mappedBy = "bankaccount_holders")
     private List<BankAccount> accounts = new ArrayList<>();
